@@ -1,18 +1,9 @@
 import React from 'react';
-import { PageContainer } from '@ant-design/pro-layout';
 import { Card, Alert, Typography } from 'antd';
-import styles from './Welcome.less';
-
-const CodePreview: React.FC<{}> = ({ children }) => (
-  <pre className={styles.pre}>
-    <code>
-      <Typography.Text copyable>{children}</Typography.Text>
-    </code>
-  </pre>
-);
+import styles from './index.less';
 
 export default (): React.ReactNode => (
-  <PageContainer>
+  <div className={styles.pre}>
     <Card>
       <Alert
         message="更快更强的重型组件，已经发布。"
@@ -34,7 +25,6 @@ export default (): React.ReactNode => (
           欢迎使用
         </a>
       </Typography.Text>
-      <CodePreview>yarn add @ant-design/pro-table</CodePreview>
       <Typography.Text
         strong
         style={{
@@ -50,7 +40,6 @@ export default (): React.ReactNode => (
           欢迎使用
         </a>
       </Typography.Text>
-      <CodePreview>yarn add @ant-design/pro-layout</CodePreview>
     </Card>
-  </PageContainer>
+  </div>
 );

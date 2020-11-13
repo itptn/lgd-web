@@ -11,15 +11,18 @@
     ],
   },
   {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
+    path: '/web',
+    name: '首页',
+    component: './Web',
+  },
+  {
+    path: '/list',
+    name: '资讯',
+    component: './ListTableList',
   },
   {
     path: '/admin',
-    name: 'admin',
-    icon: 'crown',
+    name: '数据',
     access: 'canAdmin',
     component: './Admin',
     routes: [
@@ -27,19 +30,13 @@
         path: '/admin/sub-page',
         name: 'sub-page',
         icon: 'smile',
-        component: './Welcome',
+        component: './Web',
       },
     ],
   },
   {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './ListTableList',
-  },
-  {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/web',
   },
   {
     component: './404',

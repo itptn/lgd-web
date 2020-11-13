@@ -32,27 +32,17 @@ const GlobalHeaderRight: React.FC<{}> = () => {
       <HeaderSearch
         className={`${styles.action} ${styles.search}`}
         placeholder="站内搜索"
-        defaultValue="umi ui"
         options={[
-          { label: <a href="https://umijs.org/zh/guide/umi-ui.html">umi ui</a>, value: 'umi ui' },
           {
-            label: <a href="next.ant.design">Ant Design</a>,
-            value: 'Ant Design',
-          },
-          {
-            label: <a href="https://protable.ant.design/">Pro Table</a>,
-            value: 'Pro Table',
-          },
-          {
-            label: <a href="https://prolayout.ant.design/">Pro Layout</a>,
-            value: 'Pro Layout',
-          },
+            label: <a href="next.ant.design">乐观点</a>,
+            value: '乐观点',
+          }
         ]}
         // onSearch={value => {
         //   console.log('input', value);
         // }}
       />
-      <Tooltip title="使用文档">
+      <Tooltip title="帮助文档">
         <span
           className={styles.action}
           onClick={() => {
@@ -68,7 +58,6 @@ const GlobalHeaderRight: React.FC<{}> = () => {
           <Tag color={ENVTagColor[REACT_APP_ENV]}>{REACT_APP_ENV}</Tag>
         </span>
       )}
-      <SelectLang className={styles.action} />
     </Space>
   );
 };
